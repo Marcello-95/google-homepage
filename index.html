@@ -4,24 +4,133 @@
         display: block;
         margin-left: auto;
         margin-right:auto;
-        margin-top: 50%;
-        margin-bottom: 50%;
-        width: 50%;
+        margin-top: 109px;
+        width: auto;
     }
-    ul{
+    .searchbar-position{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .searchbar{
+        border-radius: 30em;
+        padding: 13px 200px;
+        border-width: 0.1px;
+        border-style:solid;
+    }
+    .ul-nav{
         list-style-type: none;
         margin: 0;
         padding: 0;
+        overflow: hidden;
     }
-    li{
+    .li-nav1{
+        float: right;
+        margin-top: 2px;
+        margin-right:8px;
+    }
+    .li-nav2{
+        float:right;
+        margin-top: 8px;
+    }
+    .navbar:hover{
+        text-decoration: underline;
+    }
+    .navbar{
         display: inline;
-    }
-    a{
-        padding: 8px;
-    }
-    .material-icons-outlined{
+        padding: 12px;
+        text-decoration: none;
+        color:black;
+        font-size: 12px;
         
     }
+    button{
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .access-button{
+        display: block;
+        color: white;
+        padding-left: 28px;
+        padding-right: 28px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 4px; 
+        background-color: rgba(60, 124, 241, 0.979);
+        cursor: pointer;
+        border: none;
+    }
+    .access-button:hover{
+        opacity: .91;
+        transform: scale(1);
+    }
+    .btn-position{
+        display: inline-flex;
+        vertical-align: middle;
+        width: 360px;
+        position: relative;
+        left: 51%;
+        margin-left: -170px;
+        margin-top: 20px;
+    }
+    .search-button:hover{
+        border: 1px solid #c0c0c0;
+    }
+   .search-button{
+        padding: 8px 18px;
+        margin-right: 9px;
+        background-color: whitesmoke;
+        color:rgba(red, green, blue, alpha);
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+   }
+   .fortune-button:hover{
+    border: 1px solid #c0c0c0;
+   }
+   .fortune-button{
+        padding: 8px 18px;
+        padding-bottom: 8px; 
+        background-color: whitesmoke;
+        color:rgba(red, green, blue, alpha);
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+   }
+   #language{
+       text-align: center;
+       font-size:0.75em;
+       margin-top: 40px;
+   }
+   footer{
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:whitesmoke;
+    color: rgb(108, 108, 122);
+    text-align: center;
+    font-size: 14px;
+    padding: 25px;
+    font-family:sans-serif;
+   }
+   #footer-country{
+        display: flex;
+        
+   }
+   #foot-first-line{
+       display: inline-flex;
+       list-style-type: none;
+       color: rgb(108, 108, 122);
+   }
+   .foot-line{
+       padding-right: 20px;
+       text-decoration: none;
+       color: rgb(108, 108, 122);
+     }
+     .foot-line:hover{
+       text-decoration: underline;
+   }
 </style>
 <html>
 </span>
@@ -32,30 +141,43 @@
     
     <body>
         <header>
-            <ul>
-                <li><a href="gmail.asp">Gmail</a></li>
-                <li><a href="immagini.asp">Immagini</a></li>
-                <li><span class="material-icons-outlined">apps</li>
-                <li><a href="accedi.asp">Accedi</a></li>
+            <ul class="ul-nav">
+                <li class="li-nav1"><button class="access-button">
+                    <a>Accedi</a></button></li>
+                <li class="li-nav1"><img rel="png" type="image/gif/png/icon" href="apps.png"/></li>
+                <li class="li-nav2"><a class="navbar" href="immagini.asp">Immagini</a></li>
+                <li class="li-nav2"><a class="navbar" href="gmail.asp">Gmail</a></li>
             </ul>
         </header>
-        <div>
-        <img class="googleLogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
-        </div>
         
-        <p>
-            Cerca con Google
-        </p>
-        <p>
-            Mi sento fortunato
-        </p>
-        <p>
-            Google oferto in: English (UK)
-        </p>
+        <div>
+            <img class="googleLogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
+        </div>
+        <div class="searchbar-position">
+            <input class="searchbar" type="text" placeholder="">
+        </div>
+       <br>
+        <div class="btn-position">
+            <button class="search-button"><a>Cerca con Google</a></button>
+            <button class="fortune-button"><a>Mi sento fortunato</a></button>
+         </div>
+        <br>
+        <div id="language">
+            Google offerto in: <a href="" hreflang="pr">Português (Brasil)</a>
+        </div>
     <footer>
-        Brasile
-        Chi Siamo Pubblicità Soluzioni aziendali Come funziona la ricerca
-        Privacy Termini Impostazioni
+        <div id="footer-country">Brasile</div>
+        <hr size="1" width="100%" color="">
+        <div id="foot-first-line">
+            <a class="foot-line" href="">Chi Siamo</a>
+            <a class="foot-line" href="">Pubblicità</a>
+            <a class="foot-line" href="">Soluzioni aziendali</a>
+            <a class="foot-line" href="">Come funziona la ricerca</a>
+            <a class="foot-line" href="">Privacy</a>
+            <a class="foot-line" href="">Termini</a>
+            <a class="foot-line" href="">Impostazioni</a>
+            
+        </div>
     </footer>
-    </body>
+</body>
 </html>
